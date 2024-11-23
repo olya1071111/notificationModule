@@ -1,6 +1,6 @@
 package by.shift;
 
-public interface Notification {
+public interface NotificationSender {
 
     void send();
 

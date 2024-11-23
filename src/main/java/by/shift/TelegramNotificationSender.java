@@ -1,6 +1,6 @@
 package by.shift;
 
-public class TelegramNotification implements Notification{
+public class TelegramNotificationSender implements NotificationSender {
     public void send() {
         System.out.println("telegram");
     }

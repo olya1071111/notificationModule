@@ -1,6 +1,6 @@
 package by.shift;
 
-public class SmsNotification implements Notification{
+public class SmsNotificationSender implements NotificationSender {
     @Override
     public void send() {
         System.out.println("sms");

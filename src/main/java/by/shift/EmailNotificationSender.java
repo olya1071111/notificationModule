@@ -1,6 +1,6 @@
 package by.shift;
 
-public class EmailNotification implements Notification {
+public class EmailNotificationSender implements NotificationSender {
     public void send() {
         System.out.println("email");
     }
