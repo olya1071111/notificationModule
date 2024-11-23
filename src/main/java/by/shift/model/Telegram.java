@@ -1,5 +1,6 @@
 package by.shift.model;
 
+
 public class Telegram implements Notification {
     private String sender;
     private String receiver;

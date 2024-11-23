@@ -5,7 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class NotificationLogger implements NotificationSender {
 
-    private NotificationSender notificationSender;
+    private final NotificationSender notificationSender;
 
     public NotificationLogger(NotificationSender notificationSender) {
         this.notificationSender = notificationSender;

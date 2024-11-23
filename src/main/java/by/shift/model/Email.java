@@ -1,6 +1,5 @@
 package by.shift.model;
 
-import lombok.Data;
 import lombok.ToString;
 
 @ToString
