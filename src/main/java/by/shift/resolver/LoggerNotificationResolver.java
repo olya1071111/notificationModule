@@ -1,7 +1,7 @@
 package by.shift.resolver;
 
 import by.shift.NotificationLogger;
-import by.shift.NotificationSender;
+import by.shift.sender.NotificationSender;
 import by.shift.NotificationType;
 
 import java.util.HashMap;

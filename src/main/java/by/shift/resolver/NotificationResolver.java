@@ -1,6 +1,6 @@
 package by.shift.resolver;
 
-import by.shift.NotificationSender;
+import by.shift.sender.NotificationSender;
 import by.shift.NotificationType;
 
 public interface NotificationResolver {

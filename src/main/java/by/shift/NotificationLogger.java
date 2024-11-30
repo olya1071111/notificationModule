@@ -1,5 +1,7 @@
 package by.shift;
 
+import by.shift.model.Notification;
+import by.shift.sender.NotificationSender;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
@@ -12,9 +14,9 @@ public class NotificationLogger implements NotificationSender {
     }
 
     @Override
-    public void send() {
+    public void send(Notification notification) {
         log.info("Начало отправки сообщения " + notificationSender.getType());
-        notificationSender.send();
+        notificationSender.send(notification);
         log.info("Отправлено сообщение " + notificationSender.getType());
     }
 
