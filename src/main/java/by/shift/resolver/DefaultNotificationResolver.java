@@ -1,5 +1,6 @@
 package by.shift.resolver;
 
+import by.shift.model.Notification;
 import by.shift.sender.NotificationSender;
 import by.shift.NotificationType;
 
@@ -19,8 +20,8 @@ public class DefaultNotificationResolver implements NotificationResolver {
         }
     }
 
-    public NotificationSender getNotificationImpl(NotificationType notificationType) {
+    public NotificationSender getNotificationImpl(Notification notification) {
 
-        return notificationMap.get(notificationType);
+        return notificationMap.get(notification.getType());
     }
 }

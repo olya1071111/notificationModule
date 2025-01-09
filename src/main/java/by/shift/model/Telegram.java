@@ -1,16 +1,13 @@
 package by.shift.model;
 
 
-import by.shift.exception.InvalidNotificationException;
-
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+import by.shift.NotificationType;
 
 public class Telegram implements Notification {
-    private String sender;
-    private String receiver;
-    private String message;
-    private String attachment;
+    private final String sender;
+    private final String receiver;
+    private final String message;
+    private final String attachment;
 
     public Telegram(TelegramBuilder telegramBuilder) {
         this.sender = telegramBuilder.sender;
@@ -34,6 +31,11 @@ public class Telegram implements Notification {
         return sender;
     }
 
+    @Override
+    public NotificationType getType() {
+        return NotificationType.TELEGRAM;
+    }
+
     public String getAttachment() {
         return attachment;
     }
@@ -44,7 +46,6 @@ public class Telegram implements Notification {
         private String receiver;
         private String message;
         private String attachment;
-
 
 
         public Telegram build() {
@@ -73,7 +74,6 @@ public class Telegram implements Notification {
             this.attachment = attachment;
             return this;
         }
-
 
 
     }

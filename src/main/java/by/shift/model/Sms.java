@@ -1,5 +1,6 @@
 package by.shift.model;
 
+import by.shift.NotificationType;
 import lombok.ToString;
 
 @ToString
@@ -28,9 +29,15 @@ public class Sms implements Notification {
         return sender;
     }
 
+    @Override
+    public NotificationType getType() {
+        return NotificationType.SMS;
+    }
+
     public class SmsBuilder {
 
-        private SmsBuilder(){}
+        private SmsBuilder() {
+        }
 
         public Sms build() {
             return Sms.this;

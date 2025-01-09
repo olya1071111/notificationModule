@@ -1,9 +1,9 @@
 package by.shift.model;
 
+import by.shift.NotificationType;
 import by.shift.exception.InvalidNotificationException;
 import lombok.ToString;
 
-import java.util.Objects;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -39,6 +39,11 @@ public class Email implements Notification {
     @Override
     public String getSender() {
         return sender;
+    }
+
+    @Override
+    public NotificationType getType() {
+        return NotificationType.EMAIL;
     }
 
     public String getTopic() {
